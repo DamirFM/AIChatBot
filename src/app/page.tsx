@@ -20,7 +20,6 @@ export default function Chat() {
             </div>
           ))}
         </div>
-
         <form onSubmit={handleSubmit} className="flex items-center border border-pink-700 rounded shadow-xl p-2 mb-4 fixed bottom-0 w-full max-w-md bg-white mx-auto left-0 right-0">
           <input
             className="flex-1 p-2 text-gray-800 placeholder-gray-800 rounded-l   focus:outline-none"
