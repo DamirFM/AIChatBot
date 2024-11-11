@@ -1,11 +1,8 @@
-'use client';
-
+"use client";
 import { useChat } from 'ai/react';
 import React from "react";
 
-
-
-export default function About() {
+export default function Chat() {
     const { messages, input, handleInputChange, handleSubmit } = useChat();
     return (
         <div className="flex flex-col w-full max-w-md py-8 px-4 mx-auto">
@@ -24,7 +21,7 @@ export default function About() {
                 </div>
                 <form onSubmit={handleSubmit} className="flex items-center border border-pink-700 rounded shadow-xl p-2 mb-4 fixed bottom-0 w-full max-w-md bg-white mx-auto left-0 right-0">
                     <input
-                        className="flex-1 p-2 text-gray-800 placeholder-gray-800 rounded-l   focus:outline-none"
+                        className="flex-1 p-2 text-gray-800 placeholder-gray-800 rounded-l focus:outline-none"
                         value={input}
                         placeholder="How can I help you?"
                         onChange={handleInputChange}
@@ -39,6 +36,5 @@ export default function About() {
                 </form>
             </div>
         </div>
-
     );
 }
