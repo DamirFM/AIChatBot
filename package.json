@@ -1,5 +1,5 @@
 {
-  "name": "my-new-nextjs-app",
+  "name": "my-next-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,6 @@
     "@ai-sdk/openai": "^0.0.72",
     "ai": "^3.4.33",
     "next": "15.0.3",
-    "openai": "^4.71.1",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106"
   },
