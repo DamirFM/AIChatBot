@@ -1,3 +1,4 @@
+import Link from "next/dist/client/link";
 import Image from "next/image";
 
 export default function Home() {
@@ -48,6 +49,11 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <Link href="/about">
+          <div className="rounded-full bg-blue-500 text-white h-10 px-6 flex items-center justify-center sm:h-12 sm:px-8 text-sm sm:text-base hover:bg-blue-600">
+            Chat with AI
+          </div>
+        </Link>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
