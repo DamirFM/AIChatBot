@@ -21,15 +21,15 @@ Provide a visual overview of the app, such as the following:
 
 ### Chat Page
 
-![Chat Page](public/screenshots/about.png)
+![Chat Page](my-next-app/public/screenshots/about.png)
 
 ### User Input
 
-![User Input](public/screenshots/main.png)
+![User Input](my-next-app/public/screenshots/main.png)
 
 ### AI Output
 
-![AI Output](public/screenshots/main_1.png)
+![AI Output](my-next-app/public/screenshots/main_1.png)
 
 ## Technology Stack
 
