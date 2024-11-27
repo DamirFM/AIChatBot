@@ -22,7 +22,11 @@ export default function Chat() {
                     ))}
                 </div>
 
-                <form onSubmit={handleSubmit} className="flex items-center border-t border-gray-300 dark:border-gray-700 p-2 fixed bottom-0 left-0 right-0 max-w-lg mx-auto bg-white dark:bg-gray-800 rounded-lg">
+                <form
+                    aria-label="chat-form"
+                    onSubmit={handleSubmit}
+                    className="flex items-center border-t border-gray-300 dark:border-gray-700 p-2 fixed bottom-0 left-0 right-0 max-w-lg mx-auto bg-white dark:bg-gray-800 rounded-lg"
+                >
                     <input
                         className="flex-1 p-2 text-gray-900 dark:text-gray-300 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none bg-white dark:bg-gray-800 rounded-l-lg"
                         value={input}

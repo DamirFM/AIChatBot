@@ -1,8 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import Chat from "@/components/Chat";
+import Chat from "../src/app/chat/page";
 import { useChat } from "ai/react";
 
-// Mock the useChat hook
 jest.mock("ai/react", () => ({
   useChat: jest.fn(),
 }));
@@ -23,17 +22,23 @@ describe("Chat Component", () => {
   test("renders the Chat component correctly", () => {
     render(<Chat />);
 
-    // Check the header text
     expect(screen.getByText(/Chat with AI/i)).toBeInTheDocument();
     expect(
       screen.getByText(/Ask me anything, and I will do my best to help you./i)
     ).toBeInTheDocument();
 
-    // Check messages
-    expect(screen.getByText("User: Hello!")).toBeInTheDocument();
-    expect(screen.getByText("AI: Hi! How can I help you?")).toBeInTheDocument();
+    expect(
+      screen.getByText((content, element) => {
+        return element.textContent === "User: Hello!";
+      })
+    ).toBeInTheDocument();
 
-    // Check input field and button
+    expect(
+      screen.getByText((content, element) => {
+        return element.textContent === "AI: Hi! How can I help you?";
+      })
+    ).toBeInTheDocument();
+
     expect(
       screen.getByPlaceholderText(/How can I help you?/i)
     ).toBeInTheDocument();
@@ -50,7 +55,6 @@ describe("Chat Component", () => {
     });
 
     render(<Chat />);
-
     const inputField = screen.getByPlaceholderText(/How can I help you?/i);
     fireEvent.change(inputField, { target: { value: "Test input" } });
 
@@ -67,8 +71,7 @@ describe("Chat Component", () => {
     });
 
     render(<Chat />);
-
-    const form = screen.getByRole("form");
+    const form = screen.getByRole("form", { name: "chat-form" });
     fireEvent.submit(form);
 
     expect(handleSubmit).toHaveBeenCalled();
@@ -87,7 +90,10 @@ describe("Chat Component", () => {
     });
 
     render(<Chat />);
-
-    expect(screen.getByText("User: What is Next.js?")).toBeInTheDocument();
+    expect(
+      screen.getByText((content, element) => {
+        return element.textContent === "User: What is Next.js?";
+      })
+    ).toBeInTheDocument();
   });
 });

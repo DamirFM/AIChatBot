@@ -74,4 +74,6 @@ The application consists of:
 
 ## Reference
 
-You can find a full instruction here: [https://sdk.vercel.ai/docs/getting-started/nextjs-app-router](https://sdk.vercel.ai/docs/getting-started/nextjs-app-router).
+You can find a full instruction here: [https://sdk.vercel.ai/docs/getting-started/nextjs-app-router](https://sdk.vercel.ai/docs/getting-started/nextjs-app-router)
+
+testing: [https://www.youtube.com/watch?v=AS79oJ3Fcf0](https://www.youtube.com/watch?v=AS79oJ3Fcf0)
