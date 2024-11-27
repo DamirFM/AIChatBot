@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  webpack: (config) => {
+    // Ensure compatibility with `zod` or other modules
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+    };
+    return config;
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
